@@ -33,3 +33,5 @@ class Likes(models.Model):
         user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="liked_user")
 
 
+        def __str__(self):
+              return self.user + " likes" + self.blog
